@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='&l'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K3PH9CSK');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marhaba Typing & Document Clearing - UAQ</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #eef3f8; color: #222; min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between; font-size: 20px; }
+        
+        /* Extra Large Professional Header */
+        header { background: linear-gradient(135deg, #001833, #003366); color: white; padding: 65px 30px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.35); border-bottom: 10px solid #ffcc00; }
+        header h1 { font-size: 48px; margin-bottom: 16px; letter-spacing: 2px; font-weight: 800; text-transform: uppercase; }
+        header p { font-size: 22px; opacity: 0.95; margin-top: 10px; font-weight: 600; }
+
+        /* Main Wrapper Views */
+        .view-section { display: none; width: 100%; animation: fadeIn 0.4s ease-in-out; }
+        .view-section.active { display: block; }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* PAGE 1: Welcome Home Landing Page */
+        .welcome-hero { background: linear-gradient(rgba(0,24,51,0.9), rgba(0,51,102,0.9)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1400&q=80') no-repeat center center/cover; color: white; text-align: center; padding: 100px 30px; border-radius: 24px; margin: 50px auto; max-width: 1250px; box-shadow: 0 20px 50px rgba(0,0,0,0.3); }
+        
+        /* Logo Styling on Home Page */
+        .home-logo { width: 140px; height: 140px; margin: 0 auto 25px auto; background: white; padding: 15px; border-radius: 50%; box-shadow: 0 8px 25px rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; }
+        .home-logo img { width: 100%; height: 100%; object-fit: contain; }
+
+        .welcome-hero h2 { font-size: 52px; margin-bottom: 25px; font-weight: 800; }
+        .welcome-hero p { font-size: 24px; max-width: 900px; margin: 0 auto 45px auto; opacity: 0.95; line-height: 1.6; font-weight: 500; }
+        .enter-btn { background-color: #25D366; color: white; padding: 22px 55px; font-size: 24px; font-weight: bold; border: none; border-radius: 45px; cursor: pointer; text-decoration: none; display: inline-block; transition: all 0.3s; box-shadow: 0 10px 30px rgba(37,211,102,0.5); }
+        .enter-btn:hover { background-color: #1ebc57; transform: translateY(-4px); box-shadow: 0 12px 35px rgba(37,211,102,0.7); }
+
+        /* PAGE 2: Services Dashboard */
+        .container { max-width: 1350px; margin: 40px auto; padding: 0 25px; width: 100%; }
+        
+        .back-nav { margin-bottom: 35px; }
+        .back-btn { background: #003366; color: white; border: none; padding: 16px 32px; font-size: 20px; font-weight: bold; border-radius: 12px; cursor: pointer; transition: background 0.2s; box-shadow: 0 6px 15px rgba(0,0,0,0.2); }
+        .back-btn:hover { background: #001f3f; }
+
+        .search-container { text-align: center; margin-bottom: 50px; }
+        .search-container input { width: 100%; max-width: 750px; padding: 20px 35px; border: 3px solid #003366; border-radius: 40px; font-size: 20px; outline: none; box-shadow: 0 8px 25px rgba(0,0,0,0.1); transition: all 0.3s; }
+        .search-container input:focus { border-color: #0056b3; box-shadow: 0 10px 30px rgba(0,86,179,0.3); }
+
+        .section-title { font-size: 32px; color: #003366; border-bottom: 4px solid #003366; padding-bottom: 12px; margin: 60px 0 35px; font-weight: 800; display: flex; align-items: center; gap: 15px; }
+        
+        /* Grid Layout with Bigger Cards */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 35px; }
+        
+        .card { background: white; border-radius: 18px; box-shadow: 0 10px 28px rgba(0,0,0,0.08); text-align: center; cursor: pointer; transition: all 0.3s ease; overflow: hidden; border: 2px solid #e1e8ed; display: flex; flex-direction: column; }
+        .card:hover { transform: translateY(-8px); box-shadow: 0 18px 40px rgba(0,51,102,0.22); border-color: #003366; }
+        
+        .card-img-container { width: 100%; height: 200px; overflow: hidden; position: relative; background: #eef3f8; }
+        .card-img-container img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+        .card:hover .card-img-container img { transform: scale(1.08); }
+        
+        .card-content { padding: 28px; flex-grow: 1; display: flex; flex-direction: column; justify-content: center; }
+        .card h3 { font-size: 22px; color: #003366; margin-bottom: 10px; font-weight: 800; }
+        .card p { font-size: 16px; color: #555; line-height: 1.5; font-weight: 600; }
+
+        /* Modal Popup with Extra Large Readable Text & Animation */
+        .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7); align-items: center; justify-content: center; backdrop-filter: blur(5px); animation: fadeIn 0.3s ease; }
+        .modal-content { background-color: white; padding: 45px; border-radius: 24px; max-width: 680px; width: 92%; text-align: left; box-shadow: 0 25px 55px rgba(0,0,0,0.4); position: relative; animation: zoomIn 0.3s cubic-bezier(0.16, 1, 0.3, 1); max-height: 90vh; overflow-y: auto; }
+        
+        @keyframes zoomIn { from { transform: scale(0.9); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+
+        .close-btn { position: absolute; top: 20px; right: 28px; font-size: 36px; font-weight: bold; cursor: pointer; color: #888; transition: color 0.2s; }
+        .close-btn:hover { color: #000; }
+        
+        .modal-title { font-size: 30px; color: #003366; margin-bottom: 22px; border-bottom: 3px solid #eee; padding-bottom: 15px; font-weight: 800; }
+        .modal-subtitle { font-size: 20px; font-weight: bold; color: #004080; margin-top: 25px; margin-bottom: 12px; }
+        .doc-list { margin-bottom: 30px; padding-left: 25px; line-height: 1.8; font-size: 18px; color: #222; font-weight: 600; }
+        .steps-list { margin-bottom: 30px; padding-left: 25px; line-height: 1.8; font-size: 18px; color: #0056b3; font-weight: 700; }
+        
+        .whatsapp-btn { display: block; width: 100%; background-color: #25D366; color: white; text-align: center; padding: 20px; border-radius: 14px; text-decoration: none; font-weight: bold; font-size: 20px; border: none; cursor: pointer; transition: all 0.2s; box-shadow: 0 8px 20px rgba(37,211,102,0.4); }
+        .whatsapp-btn:hover { background-color: #1ebc57; transform: translateY(-2px); box-shadow: 0 10px 25px rgba(37,211,102,0.5); }
+        .email-info { text-align: center; font-size: 17px; color: #555; margin-top: 20px; font-weight: 600; }
+
+        /* Extra Large Professional Footer */
+        footer { background: #001833; color: white; text-align: center; padding: 60px 20px; border-top: 10px solid #003366; margin-top: 80px; }
+        footer p { font-size: 20px; opacity: 0.95; margin-bottom: 12px; font-weight: 800; }
+        footer .footer-sub { font-size: 17px; opacity: 0.8; font-weight: 500; }
+    </style>
+</head>
+<body>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K3PH9CSK"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <!-- Extra Large Professional Header -->
+    <header>
+        <h1>MARHABA TYPING & DOCUMENT CLEARING</h1>
+        <p>Old Industrial Area, Umm Al Quwain</p>
+        <p style="margin-top: 15px; font-size: 20px;">📱 Mob: 056 934 9333 &nbsp;|&nbsp; ✉️ Email: marhabatypinguaq@gmail.com</p>
+    </header>
+
+    <!-- ================= PAGE 1: HOME / WELCOME VIEW ================= -->
+    <div id="homeView" class="view-section active">
+        <div class="welcome-hero">
+            <!-- Custom Logo Added Here -->
+            <div class="home-logo">
+                <img src="light blue.png" alt="Marhaba Logo">
+            </div>
+            <h2>Welcome to Marhaba Typing Services</h2>
+            <p>Your trusted partner for fast and reliable government document clearing, visa processing, and typing solutions in Umm Al Quwain.</p>
+            <button class="enter-btn" onclick="showServicesView()">Explore Services & Requirements →</button>
+        </div>
+    </div>
+
+    <!-- ================= PAGE 2: SERVICES DASHBOARD VIEW ================= -->
+    <div id="servicesView" class="view-section">
+        <div class="container">
+            <div class="back-nav">
+                <button class="back-btn" onclick="showHomeView()">← Back to Home</button>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="search-container">
+                <input type="text" id="searchInput" onkeyup="filterServices()" placeholder="Search services (e.g., Family Visa, Company, Domestic)...">
+            </div>
+
+            <!-- FAMILY VISA SECTION -->
+            <div class="section-title">👨‍👩‍👧 Family Visa Services</div>
+            <div class="grid" id="serviceGrid">
+                <div class="card" onclick="openModal('New Family Visa — Wife', 
+                    ['Sponsor Passport Copy', 'Sponsor Emirates ID Copy', 'Sponsor Visa Copy', 'Original Salary Certificate (or Labor Contract)', 'Attested Tenancy Contract (Ejari / Municipality)'], 
+                    ['Wife\'s Passport Scanned Copy (Both sides)', 'Passport Size Photo (White Background)', 'Marriage Certificate (Attested & Translated copy)'],
+                    ['Original Salary Certificate / Labor Contract', 'Attested Tenancy Contract', 'Marriage Certificate (Attested & Translated)', 'File Creation -> Entry Permit -> In/Out -> Medical & Health Insurance -> ID Typing -> Visa Stamping'])">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=500&q=80" alt="Family Visa">
+                    </div>
+                    <div class="card-content">
+                        <h3>New Family Visa — Wife</h3>
+                        <p>Required docs & step-by-step process</p>
+                    </div>
+                </div>
+
+                <div class="card" onclick="openModal('New Family Visa — Child', 
+                    ['Sponsor Passport Copy', 'Sponsor Emirates ID Copy', 'Sponsor Visa Copy', 'Original Salary Certificate (or Labor Contract)', 'Attested Tenancy Contract (Ejari / Municipality)'], 
+                    ['Child\'s Passport Scanned Copy (Both sides)', 'Passport Size Photo (White Background)', 'Birth Certificate (Attested & Translated copy)'],
+                    ['Original Salary Certificate / Labor Contract', 'Attested Tenancy Contract', 'Birth Certificate (Attested & Translated)', 'File Creation -> Entry Permit -> In/Out -> Medical & Health Insurance -> ID Typing -> Visa Stamping'])">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?auto=format&fit=crop&w=500&q=80" alt="Child Visa">
+                    </div>
+                    <div class="card-content">
+                        <h3>New Family Visa — Child</h3>
+                        <p>Required docs & step-by-step process</p>
+                    </div>
+                </div>
+
+                <div class="card" onclick="openModal('Renewal Family Visa — Wife', 
+                    ['Sponsor Passport Copy', 'Sponsor Emirates ID Copy', 'Sponsor Visa Copy', 'Original Salary Certificate (or Labor Contract)', 'Attested Tenancy Contract (Ejari / Municipality)'], 
+                    ['Wife\'s Scanned Passport Copy (Both sides)', 'Passport Size Photo (Studio quality)', 'Marriage Certificate (Attested & Translated copy)', 'Old Emirates ID Copy & Visa Copy'],
+                    ['Original Salary Certificate / Labor Contract', 'Attested Tenancy Contract', 'Medical & Health Insurance', 'ID Typing -> Visa Stamping'])">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=500&q=80" alt="Renewal Wife">
+                    </div>
+                    <div class="card-content">
+                        <h3>Renewal Family Visa — Wife</h3>
+                        <p>Required docs & renewal steps</p>
+                    </div>
+                </div>
+
+                <div class="card" onclick="openModal('Renewal Family Visa — Child', 
+                    ['Sponsor Passport Copy', 'Sponsor Emirates ID Copy', 'Sponsor Visa Copy', 'Original Salary Certificate (or Labor Contract)', 'Attested Tenancy Contract (Ejari / Municipality)'], 
+                    ['Child\'s Scanned Passport Copy (Both sides)', 'Passport Size Photo (Studio quality)', 'Birth Certificate (Attested & Translated copy)', 'Old Emirates ID Copy & Visa Copy'],
+                    ['Original Salary Certificate / Labor Contract', 'Attested Tenancy Contract', 'Medical & Health Insurance', 'ID Typing -> Visa Stamping'])">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=500&q=80" alt="Renewal Child">
+                    </div>
+                    <div class="card-content">
+                        <h3>Renewal Family Visa — Child</h3>
+                        <p>Required docs & renewal steps</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COMPANY / PROFESSIONAL VISA SECTION -->
+            <div class="section-title">💼 Company & Professional Visa Services</div>
+            <div class="grid">
+                <div class="card" onclick="openModal('New Residence Visa — Company', 
+                    ['Passport Copy (Front & Back)', 'Passport Size Photo (White Background)', 'Educational Certificate (If required)', 'Cancellation Paper (If canceled)', 'PCC (If required)'], 
+                    [],
+                    ['Offer Letter', 'Labor Payment', 'DXB Insurance', 'Entry Permit', 'In/Out', 'Tawjeeh', 'Medical & Health Insurance', 'ID Typing -> Visa Stamping'])">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=500&q=80" alt="Company Professional">
+                    </div>
+                    <div class="card-content">
+                        <h3>New Residence Visa (Company)</h3>
+                        <p>Offer letter & professional steps</p>
+                    </div>
+                </div>
+
+                <div class="card" onclick="openModal('Renew Residence Visa — Company', 
+                    ['Valid Passport Copy (Front & Back)', 'Passport Size Photo (White Background)'], 
+                    [],
+                    ['Labor Renewal Typing', 'Labor Payment', 'DXB Insurance', 'Medical & Health Insurance', 'ID Typing -> Visa Stamping'])">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=500&q=80" alt="Company Renewal">
+                    </div>
+                    <div class="card-content">
+                        <h3>Renew Residence Visa (Company)</h3>
+                        <p>Renewal requirements & steps</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DOMESTIC WORKER VISA SECTION -->
+            <div class="section-title">🏠 Domestic Worker Visa Services</div>
+            <div class="grid">
+                <div class="card" onclick="openModal('New Visa for Domestic Worker', 
+                    ['Sponsor & Worker Documents', 'Passport Copies & Photos'], 
+                    [],
+                    ['DXB Insurance', 'Entry Permit', 'In/Out', 'Medical & Health Insurance', 'ID Typing -> Visa Stamping'])">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=500&q=80" alt="Domestic Worker">
+                    </div>
+                    <div class="card-content">
+                        <h3>New Visa for Domestic</h3>
+                        <p>Insurance, medical & stamping steps</p>
+                    </div>
+                </div>
+
+                <div class="card" onclick="openModal('Renew Visa for Domestic Worker', 
+                    ['Valid Passport & ID Copies'], 
+                    [],
+                    ['Contract Typing', 'DXB Insurance', 'Medical & Health Insurance', 'ID Typing -> Visa Stamping'])">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=500&q=80" alt="Domestic Renewal">
+                    </div>
+                    <div class="card-content">
+                        <h3>Renew Visa for Domestic</h3>
+                        <p>Contract, insurance & renewal steps</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Popup -->
+    <div id="serviceModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2 class="modal-title" id="modalTitle">Service Title</h2>
+            
+            <div id="docSection">
+                <div class="modal-subtitle">📄 Required Documents:</div>
+                <ul class="doc-list" id="modalDocList"></ul>
+            </div>
+
+            <div id="stepSection">
+                <div class="modal-subtitle">⚙️ Process Steps & Requirements:</div>
+                <ul class="steps-list" id="modalStepList"></ul>
+            </div>
+
+            <a id="whatsappLink" href="#" target="_blank" class="whatsapp-btn">📲 Send Inquiry / Documents on WhatsApp</a>
+            <div class="email-info">Or email documents to: <strong>marhabatypinguaq@gmail.com</strong></div>
+        </div>
+    </div>
+
+    <!-- Extra Large Professional Footer -->
+    <footer>
+        <p>MARHABA TYPING & DOCUMENT CLEARING</p>
+        <p>Old Industrial Area, Umm Al Quwain, UAE | Mob: 056 934 9333</p>
+        <p class="footer-sub" style="margin-top: 15px;">Powered by ATAVA Digital Services & Trading</p>
+    </footer>
+
+    <script>
+        // Page Navigation Functions
+        function showServicesView() {
+            document.getElementById('homeView').classList.remove('active');
+            document.getElementById('servicesView').classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function showHomeView() {
+            document.getElementById('servicesView').classList.remove('active');
+            document.getElementById('homeView').classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function openModal(serviceName, sponsorDocs, applicantDocs, steps) {
+            document.getElementById('modalTitle').innerText = serviceName;
+            
+            var docList = document.getElementById('modalDocList');
+            docList.innerHTML = '';
+            
+            if(sponsorDocs.length > 0) {
+                var spHeader = document.createElement('li');
+                spHeader.innerHTML = '<strong>Sponsor Documents:</strong>';
+                docList.appendChild(spHeader);
+                sponsorDocs.forEach(function(doc) {
+                    var li = document.createElement('li');
+                    li.innerText = doc;
+                    docList.appendChild(li);
+                });
+            }
+
+            if(applicantDocs.length > 0) {
+                var apHeader = document.createElement('li');
+                apHeader.innerHTML = '<strong style="margin-top:10px; display:inline-block;">Applicant / Worker Documents:</strong>';
+                docList.appendChild(apHeader);
+                applicantDocs.forEach(function(doc) {
+                    var li = document.createElement('li');
+                    li.innerText = doc;
+                    docList.appendChild(li);
+                });
+            }
+
+            if(sponsorDocs.length === 0 && applicantDocs.length === 0) {
+                var li = document.createElement('li');
+                li.innerText = 'Standard Passport & Photo requirements apply.';
+                docList.appendChild(li);
+            }
+
+            var stepList = document.getElementById('modalStepList');
+            stepList.innerHTML = '';
+            steps.forEach(function(step) {
+                var li = document.createElement('li');
+                li.innerText = step;
+                stepList.appendChild(li);
+            });
+
+            // WhatsApp Message Formatting
+            var message = "Hello Marhaba Typing, I need assistance with *" + serviceName + "*.\n\nPlease check my requirements.";
+            var encodedMsg = encodeURIComponent(message);
+            document.getElementById('whatsappLink').href = "https://wa.me/971569349333?text=" + encodedMsg;
+
+            document.getElementById('serviceModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('serviceModal').style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            var modal = document.getElementById('serviceModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+
+        function filterServices() {
+            var input = document.getElementById('searchInput').value.toLowerCase();
+            var cards = document.getElementsByClassName('card');
+            for (var i = 0; i < cards.length; i++) {
+                var title = cards[i].innerText.toLowerCase();
+                if (title.includes(input)) {
+                    cards[i].style.display = "";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
